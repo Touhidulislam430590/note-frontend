@@ -15,6 +15,12 @@ const NoteList = () => {
     return (
         <div>
             <h2>All Notes {note.length}</h2>
+
+            <div className="notes-list">
+                {
+                    note.map( (singleNote, index) => <h3 key={index}>{index+1}. {singleNote.title}</h3> )
+                }
+            </div>
             <Note></Note>
         </div>
     );
